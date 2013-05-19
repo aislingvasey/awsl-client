@@ -1,4 +1,4 @@
 awsl-client
 ===========
 
-Webservice client for the AWSL feed.
+A generated web service client for the AWSL feed.
