@@ -1,0 +1,258 @@
+<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://tempuri.org/">
+	<xs:import schemaLocation="wsdl_xsd2.xml" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	<xs:import schemaLocation="wsdl_xsd3.xml" namespace="http://schemas.datacontract.org/2004/07/LiveMediaStructs.MatchNS" />
+	<xs:import schemaLocation="wsdl_xsd5.xml" namespace="http://schemas.datacontract.org/2004/07/LiveMediaStructs.FilActionNS" />
+	<xs:import schemaLocation="wsdl_xsd6.xml" namespace="http://schemas.datacontract.org/2004/07/LiveMediaStructs.ScoringNS" />
+	<xs:import schemaLocation="wsdl_xsd7.xml" namespace="http://schemas.datacontract.org/2004/07/LiveMediaStructs.RankingNS" />
+	<xs:element name="IsReady">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IsReadyResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IsReadyResult" type="xs:boolean" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServiceVersion">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServiceVersionResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ServiceVersionResult" nillable="true" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchStructDetailAvailable">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchStructDetailAvailableResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetMatchStructDetailAvailableResult" nillable="true" type="q1:ArrayOfKeyValueOfintstring"
+					xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MatchLightStructList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idDetail" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MatchLightStructListResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="MatchLightStructListResult" nillable="true" type="q2:ArrayOfMatchLightStruct"
+					xmlns:q2="http://schemas.datacontract.org/2004/07/LiveMediaStructs.MatchNS" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchStruct">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idMatch" type="xs:int" />
+				<xs:element minOccurs="0" name="idDetail" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchStructResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetMatchStructResult" nillable="true" type="q3:MatchStruct"
+					xmlns:q3="http://schemas.datacontract.org/2004/07/LiveMediaStructs.MatchNS" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchStructList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idMatchList" nillable="true" type="q4:ArrayOfint"
+					xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="idDetail" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchStructListResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetMatchStructListResult" nillable="true" type="q5:ArrayOfMatchStruct"
+					xmlns:q5="http://schemas.datacontract.org/2004/07/LiveMediaStructs.MatchNS" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetActorStruct">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idMatch" type="xs:int" />
+				<xs:element minOccurs="0" name="idActor" type="xs:int" />
+				<xs:element minOccurs="0" name="idDetail" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetActorStructResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetActorStructResult" nillable="true" type="q6:ActorStruct"
+					xmlns:q6="http://schemas.datacontract.org/2004/07/LiveMediaStructs.MatchNS" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTeamStruct">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idMatch" type="xs:int" />
+				<xs:element minOccurs="0" name="idTeam" type="xs:int" />
+				<xs:element minOccurs="0" name="idDetail" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTeamStructResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetTeamStructResult" nillable="true" type="q7:TeamStruct"
+					xmlns:q7="http://schemas.datacontract.org/2004/07/LiveMediaStructs.MatchNS" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LfpGetMatchOldXmlContentC">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idMatchLFP" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LfpGetMatchOldXmlContentCResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="LfpGetMatchOldXmlContentCResult" nillable="true" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchFilActionStructDetailAvailable">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchFilActionStructDetailAvailableResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetMatchFilActionStructDetailAvailableResult" nillable="true"
+					type="q8:ArrayOfKeyValueOfintstring" xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MatchFilActionLightStructList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idDetail" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MatchFilActionLightStructListResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="MatchFilActionLightStructListResult" nillable="true"
+					type="q9:ArrayOfMatchFilActionLightStruct" xmlns:q9="http://schemas.datacontract.org/2004/07/LiveMediaStructs.FilActionNS" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchFilActionStruct">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idMatch" type="xs:int" />
+				<xs:element minOccurs="0" name="idDetail" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchFilActionStructResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetMatchFilActionStructResult" nillable="true" type="q10:MatchFilActionStruct"
+					xmlns:q10="http://schemas.datacontract.org/2004/07/LiveMediaStructs.FilActionNS" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchFilActionStructList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idMatch" nillable="true" type="q11:ArrayOfint"
+					xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="idDetail" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchFilActionStructListResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetMatchFilActionStructListResult" nillable="true" type="q12:ArrayOfMatchFilActionStruct"
+					xmlns:q12="http://schemas.datacontract.org/2004/07/LiveMediaStructs.FilActionNS" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetDayScoringStructDetailAvailable">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetDayScoringStructDetailAvailableResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetDayScoringStructDetailAvailableResult" nillable="true"
+					type="q13:ArrayOfKeyValueOfintstring" xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DayScoringStructList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idDetail" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DayScoringStructListResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="DayScoringStructListResult" nillable="true" type="q14:ArrayOfDayScoringStruct"
+					xmlns:q14="http://schemas.datacontract.org/2004/07/LiveMediaStructs.ScoringNS" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetDayRankingStructDetailAvailable">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetDayRankingStructDetailAvailableResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetDayRankingStructDetailAvailableResult" nillable="true"
+					type="q15:ArrayOfKeyValueOfintstring" xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DayRankingStructList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idDetail" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DayRankingStructListResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="DayRankingStructListResult" nillable="true" type="q16:ArrayOfDayRankingStruct"
+					xmlns:q16="http://schemas.datacontract.org/2004/07/LiveMediaStructs.RankingNS" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

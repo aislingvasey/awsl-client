@@ -1,0 +1,16 @@
+<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS">
+	<xs:complexType name="ArrayOfCIS">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="CIS" nillable="true" type="tns:CIS" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfCIS" nillable="true" type="tns:ArrayOfCIS" />
+	<xs:complexType name="CIS">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="IdClient" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="CIS" nillable="true" type="tns:CIS" />
+</xs:schema>

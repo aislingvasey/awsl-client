@@ -1,0 +1,253 @@
+<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LiveMediaStructs.MatchNS"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/LiveMediaStructs.MatchNS">
+	<xs:import schemaLocation="wsdl_xsd4.xml" namespace="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+	<xs:complexType name="ArrayOfMatchLightStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="MatchLightStruct" nillable="true" type="tns:MatchLightStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfMatchLightStruct" nillable="true" type="tns:ArrayOfMatchLightStruct" />
+	<xs:complexType name="MatchLightStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="CodeMatch" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="CompetitionName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="DateAndTime" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="Day" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="IdMatch" type="xs:int" />
+			<xs:element minOccurs="0" name="IdStatus" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="LstCIS" nillable="true" type="q1:ArrayOfCIS"
+				xmlns:q1="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+			<xs:element minOccurs="0" name="LstTeamLightStruct" nillable="true" type="tns:ArrayOfTeamLightStruct" />
+			<xs:element minOccurs="0" name="SeasonEndDate" nillable="true" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="SeasonStartDate" nillable="true" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="TeamLightStructA" nillable="true" type="tns:TeamLightStruct" />
+			<xs:element minOccurs="0" name="TeamLightStructB" nillable="true" type="tns:TeamLightStruct" />
+			<xs:element minOccurs="0" name="UtcOffsetDisplay" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="UtcOffsetSeconds" nillable="true" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="MatchLightStruct" nillable="true" type="tns:MatchLightStruct" />
+	<xs:complexType name="ArrayOfTeamLightStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="TeamLightStruct" nillable="true" type="tns:TeamLightStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfTeamLightStruct" nillable="true" type="tns:ArrayOfTeamLightStruct" />
+	<xs:complexType name="TeamLightStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="AbbrevClubName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="ClubName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="CodeName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="IdTeam" type="xs:int" />
+			<xs:element minOccurs="0" name="IsTeamA" type="xs:boolean" />
+			<xs:element minOccurs="0" name="LstCIS" nillable="true" type="q2:ArrayOfCIS"
+				xmlns:q2="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+			<xs:element minOccurs="0" name="MediaName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="TeamName" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TeamLightStruct" nillable="true" type="tns:TeamLightStruct" />
+	<xs:complexType name="MatchStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="CodeMatch" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="CompetitionName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="CurrentHalf" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="DateAndTime" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="Day" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="IdCertificationState" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="IdMatch" type="xs:int" />
+			<xs:element minOccurs="0" name="IdStatus" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="LstCIS" nillable="true" type="q3:ArrayOfCIS"
+				xmlns:q3="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+			<xs:element minOccurs="0" name="LstReferees" nillable="true" type="tns:ArrayOfActorLightStruct" />
+			<xs:element minOccurs="0" name="LstSDTS" nillable="true" type="tns:ArrayOfSDTS" />
+			<xs:element minOccurs="0" name="LstTeamStruct" nillable="true" type="tns:ArrayOfTeamStruct" />
+			<xs:element minOccurs="0" name="SeasonEndDate" nillable="true" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="SeasonStartDate" nillable="true" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="StadiumName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="UtcOffsetDisplay" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="UtcOffsetSeconds" nillable="true" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="MatchStruct" nillable="true" type="tns:MatchStruct" />
+	<xs:complexType name="ArrayOfActorLightStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="ActorLightStruct" nillable="true" type="tns:ActorLightStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfActorLightStruct" nillable="true" type="tns:ArrayOfActorLightStruct" />
+	<xs:complexType name="ActorLightStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="FN" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="IdA" type="xs:int" />
+			<xs:element minOccurs="0" name="LstCIS" nillable="true" type="q4:ArrayOfCIS"
+				xmlns:q4="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+			<xs:element minOccurs="0" name="NN" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="SN" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="UFN" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ActorLightStruct" nillable="true" type="tns:ActorLightStruct" />
+	<xs:complexType name="ArrayOfSDTS">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="SDTS" nillable="true" type="tns:SDTS" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfSDTS" nillable="true" type="tns:ArrayOfSDTS" />
+	<xs:complexType name="SDTS">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="IdDT" type="xs:int" />
+			<xs:element minOccurs="0" name="LstSS" nillable="true" type="tns:ArrayOfSS" />
+			<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SDTS" nillable="true" type="tns:SDTS" />
+	<xs:complexType name="ArrayOfSS">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="SS" nillable="true" type="tns:SS" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfSS" nillable="true" type="tns:ArrayOfSS" />
+	<xs:complexType name="SS">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="A2" nillable="true" type="tns:ActorLightStruct" />
+			<xs:element minOccurs="0" name="Id" type="xs:int" />
+			<xs:element minOccurs="0" name="LSOS" nillable="true" type="tns:ArrayOfSOS" />
+			<xs:element minOccurs="0" name="V" nillable="true" type="xs:double" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SS" nillable="true" type="tns:SS" />
+	<xs:complexType name="ArrayOfSOS">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="SOS" nillable="true" type="tns:SOS" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfSOS" nillable="true" type="tns:ArrayOfSOS" />
+	<xs:complexType name="SOS">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="ETHms" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="ETHstr" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="ETMms" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="ETMstr" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="IdH" type="xs:int" />
+			<xs:element minOccurs="0" name="STHms" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="STHstr" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="STMms" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="STMstr" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SOS" nillable="true" type="tns:SOS" />
+	<xs:complexType name="ArrayOfTeamStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="TeamStruct" nillable="true" type="tns:TeamStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfTeamStruct" nillable="true" type="tns:ArrayOfTeamStruct" />
+	<xs:complexType name="TeamStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="AbbrevClubName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="ClubName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="Coach" nillable="true" type="tns:ActorLightStruct" />
+			<xs:element minOccurs="0" name="CodeName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="ColorHexa" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="IdTeam" type="xs:int" />
+			<xs:element minOccurs="0" name="IsTeamA" type="xs:boolean" />
+			<xs:element minOccurs="0" name="LstActorStruct" nillable="true" type="tns:ArrayOfActorStruct" />
+			<xs:element minOccurs="0" name="LstActorSubstitutionStruct" nillable="true" type="tns:ArrayOfActorSubstitutionStruct" />
+			<xs:element minOccurs="0" name="LstCIS" nillable="true" type="q5:ArrayOfCIS"
+				xmlns:q5="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+			<xs:element minOccurs="0" name="LstSDTS" nillable="true" type="tns:ArrayOfSDTS" />
+			<xs:element minOccurs="0" name="LstScorerStruct" nillable="true" type="tns:ArrayOfScorerStruct" />
+			<xs:element minOccurs="0" name="LstTeamHalfStruct" nillable="true" type="tns:ArrayOfTeamHalfStruct" />
+			<xs:element minOccurs="0" name="MediaName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="ScoreEndOfficialTime" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="ScoreFinalShot" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="ScoreHafTime" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="ScoreOverTime1" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="ScoreOverTime2" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="TeamName" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TeamStruct" nillable="true" type="tns:TeamStruct" />
+	<xs:complexType name="ArrayOfActorStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="ActorStruct" nillable="true" type="tns:ActorStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfActorStruct" nillable="true" type="tns:ArrayOfActorStruct" />
+	<xs:complexType name="ActorStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="IdActor" type="xs:int" />
+			<xs:element minOccurs="0" name="IdBlock" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="IdPosition" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="IdPreferedBlock" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="IsCaptain" type="xs:boolean" />
+			<xs:element minOccurs="0" name="LstCIS" nillable="true" type="q6:ArrayOfCIS"
+				xmlns:q6="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+			<xs:element minOccurs="0" name="LstSDTS" nillable="true" type="tns:ArrayOfSDTS" />
+			<xs:element minOccurs="0" name="NickName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="SecondName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="ShirtNumber" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="UsualFirstName" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ActorStruct" nillable="true" type="tns:ActorStruct" />
+	<xs:complexType name="ArrayOfActorSubstitutionStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="ActorSubstitutionStruct" nillable="true"
+				type="tns:ActorSubstitutionStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfActorSubstitutionStruct" nillable="true" type="tns:ArrayOfActorSubstitutionStruct" />
+	<xs:complexType name="ActorSubstitutionStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="HalfId" type="xs:int" />
+			<xs:element minOccurs="0" name="PlayerIn" nillable="true" type="tns:ActorLightStruct" />
+			<xs:element minOccurs="0" name="PlayerOut" nillable="true" type="tns:ActorLightStruct" />
+			<xs:element minOccurs="0" name="TimeMatchMs" type="xs:int" />
+			<xs:element minOccurs="0" name="TimeMatchStr" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ActorSubstitutionStruct" nillable="true" type="tns:ActorSubstitutionStruct" />
+	<xs:complexType name="ArrayOfScorerStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="ScorerStruct" nillable="true" type="tns:ScorerStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfScorerStruct" nillable="true" type="tns:ArrayOfScorerStruct" />
+	<xs:complexType name="ScorerStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="HalfId" type="xs:int" />
+			<xs:element minOccurs="0" name="IdGoalType" type="xs:int" />
+			<xs:element minOccurs="0" name="PlayerScorer" nillable="true" type="tns:ActorLightStruct" />
+			<xs:element minOccurs="0" name="ScoreA" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="ScoreB" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="TimeMatchMs" type="xs:int" />
+			<xs:element minOccurs="0" name="TimeMatchStr" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ScorerStruct" nillable="true" type="tns:ScorerStruct" />
+	<xs:complexType name="ArrayOfTeamHalfStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="TeamHalfStruct" nillable="true" type="tns:TeamHalfStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfTeamHalfStruct" nillable="true" type="tns:ArrayOfTeamHalfStruct" />
+	<xs:complexType name="TeamHalfStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="IdHalf" type="xs:int" />
+			<xs:element minOccurs="0" name="IsAtLeft" type="xs:boolean" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TeamHalfStruct" nillable="true" type="tns:TeamHalfStruct" />
+	<xs:complexType name="ArrayOfMatchStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="MatchStruct" nillable="true" type="tns:MatchStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfMatchStruct" nillable="true" type="tns:ArrayOfMatchStruct" />
+</xs:schema>

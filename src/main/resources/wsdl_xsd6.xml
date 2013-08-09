@@ -1,0 +1,54 @@
+<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LiveMediaStructs.ScoringNS"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/LiveMediaStructs.ScoringNS">
+	<xs:complexType name="ArrayOfDayScoringStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="DayScoringStruct" nillable="true" type="tns:DayScoringStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfDayScoringStruct" nillable="true" type="tns:ArrayOfDayScoringStruct" />
+	<xs:complexType name="DayScoringStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="CompetitionName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="LstMatchsScoringStruct" nillable="true" type="tns:ArrayOfMatchDayScoringStruct" />
+			<xs:element minOccurs="0" name="NumDay" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="SeasonEndDate" nillable="true" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="SeasonStartDate" nillable="true" type="xs:dateTime" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DayScoringStruct" nillable="true" type="tns:DayScoringStruct" />
+	<xs:complexType name="ArrayOfMatchDayScoringStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="MatchDayScoringStruct" nillable="true"
+				type="tns:MatchDayScoringStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfMatchDayScoringStruct" nillable="true" type="tns:ArrayOfMatchDayScoringStruct" />
+	<xs:complexType name="MatchDayScoringStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="CodeMatch" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="CompetitionName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="DateAndTime" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="IdMatch" type="xs:int" />
+			<xs:element minOccurs="0" name="IdStatus" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="LstTeamScoringStruct" nillable="true" type="tns:ArrayOfDayTeamScoringStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="MatchDayScoringStruct" nillable="true" type="tns:MatchDayScoringStruct" />
+	<xs:complexType name="ArrayOfDayTeamScoringStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="DayTeamScoringStruct" nillable="true" type="tns:DayTeamScoringStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfDayTeamScoringStruct" nillable="true" type="tns:ArrayOfDayTeamScoringStruct" />
+	<xs:complexType name="DayTeamScoringStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="CodeName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="IdTeam" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="IsTeamA" type="xs:boolean" />
+			<xs:element minOccurs="0" name="Score_EndOfficialTime" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="Score_HalfTime" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="TeamName" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DayTeamScoringStruct" nillable="true" type="tns:DayTeamScoringStruct" />
+</xs:schema>

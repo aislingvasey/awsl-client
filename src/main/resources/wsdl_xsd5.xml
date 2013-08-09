@@ -1,0 +1,119 @@
+<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LiveMediaStructs.FilActionNS"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/LiveMediaStructs.FilActionNS">
+	<xs:import schemaLocation="wsdl_xsd4.xml" namespace="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+	<xs:complexType name="ArrayOfMatchFilActionLightStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="MatchFilActionLightStruct" nillable="true"
+				type="tns:MatchFilActionLightStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfMatchFilActionLightStruct" nillable="true" type="tns:ArrayOfMatchFilActionLightStruct" />
+	<xs:complexType name="MatchFilActionLightStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="CodeMatch" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="CompetitionName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="DateAndTime" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="Day" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="IdMatch" type="xs:int" />
+			<xs:element minOccurs="0" name="LstCIS" nillable="true" type="q1:ArrayOfCIS"
+				xmlns:q1="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+			<xs:element minOccurs="0" name="LstTeamMatchFilActionStruct" nillable="true"
+				type="tns:ArrayOfTeamMatchFilActionLightStruct" />
+			<xs:element minOccurs="0" name="SeasonEndDate" nillable="true" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="SeasonStartDate" nillable="true" type="xs:dateTime" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="MatchFilActionLightStruct" nillable="true" type="tns:MatchFilActionLightStruct" />
+	<xs:complexType name="ArrayOfTeamMatchFilActionLightStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="TeamMatchFilActionLightStruct" nillable="true"
+				type="tns:TeamMatchFilActionLightStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfTeamMatchFilActionLightStruct" nillable="true" type="tns:ArrayOfTeamMatchFilActionLightStruct" />
+	<xs:complexType name="TeamMatchFilActionLightStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="CodeName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="IdTeam" type="xs:int" />
+			<xs:element minOccurs="0" name="LstCIS" nillable="true" type="q2:ArrayOfCIS"
+				xmlns:q2="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+			<xs:element minOccurs="0" name="TeamName" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TeamMatchFilActionLightStruct" nillable="true" type="tns:TeamMatchFilActionLightStruct" />
+	<xs:complexType name="MatchFilActionStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="CodeMatch" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="CompetitionName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="DateAndTime" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="Day" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="IdMatch" type="xs:int" />
+			<xs:element minOccurs="0" name="LstCIS" nillable="true" type="q3:ArrayOfCIS"
+				xmlns:q3="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+			<xs:element minOccurs="0" name="LstEventMatchFilActionStruct" nillable="true" type="tns:ArrayOfEventMatchFilActionStruct" />
+			<xs:element minOccurs="0" name="LstTeamMatchFilActionStruct" nillable="true" type="tns:ArrayOfTeamMatchFilActionStruct" />
+			<xs:element minOccurs="0" name="SeasonEndDate" nillable="true" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="SeasonStartDate" nillable="true" type="xs:dateTime" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="MatchFilActionStruct" nillable="true" type="tns:MatchFilActionStruct" />
+	<xs:complexType name="ArrayOfEventMatchFilActionStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="EventMatchFilActionStruct" nillable="true"
+				type="tns:EventMatchFilActionStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfEventMatchFilActionStruct" nillable="true" type="tns:ArrayOfEventMatchFilActionStruct" />
+	<xs:complexType name="EventMatchFilActionStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Actor1" nillable="true" type="tns:ActorMatchFilActionStruct" />
+			<xs:element minOccurs="0" name="Actor2" nillable="true" type="tns:ActorMatchFilActionStruct" />
+			<xs:element minOccurs="0" name="HalfId" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="IdEvent" type="xs:int" />
+			<xs:element minOccurs="0" name="IsHalfTimeSubstitution" nillable="true" type="xs:boolean" />
+			<xs:element minOccurs="0" name="PhaseEndTimeMs" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="PhaseStartTimeMs" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="ScoreA" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="ScoreB" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="Team1" nillable="true" type="tns:TeamMatchFilActionStruct" />
+			<xs:element minOccurs="0" name="Team2" nillable="true" type="tns:TeamMatchFilActionStruct" />
+			<xs:element minOccurs="0" name="TimeMatchMs" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="TimeMatchStr" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="X" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="Y" nillable="true" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="EventMatchFilActionStruct" nillable="true" type="tns:EventMatchFilActionStruct" />
+	<xs:complexType name="ActorMatchFilActionStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="IdActor" type="xs:int" />
+			<xs:element minOccurs="0" name="LstCIS" nillable="true" type="q4:ArrayOfCIS"
+				xmlns:q4="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+			<xs:element minOccurs="0" name="NickName" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ActorMatchFilActionStruct" nillable="true" type="tns:ActorMatchFilActionStruct" />
+	<xs:complexType name="TeamMatchFilActionStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="CodeName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="IdTeam" type="xs:int" />
+			<xs:element minOccurs="0" name="LstCIS" nillable="true" type="q5:ArrayOfCIS"
+				xmlns:q5="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+			<xs:element minOccurs="0" name="TeamName" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TeamMatchFilActionStruct" nillable="true" type="tns:TeamMatchFilActionStruct" />
+	<xs:complexType name="ArrayOfTeamMatchFilActionStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="TeamMatchFilActionStruct" nillable="true"
+				type="tns:TeamMatchFilActionStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfTeamMatchFilActionStruct" nillable="true" type="tns:ArrayOfTeamMatchFilActionStruct" />
+	<xs:complexType name="ArrayOfMatchFilActionStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="MatchFilActionStruct" nillable="true" type="tns:MatchFilActionStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfMatchFilActionStruct" nillable="true" type="tns:ArrayOfMatchFilActionStruct" />
+</xs:schema>

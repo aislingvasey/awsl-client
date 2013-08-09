@@ -1,0 +1,50 @@
+<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LiveMediaStructs.RankingNS"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/LiveMediaStructs.RankingNS">
+	<xs:import schemaLocation="wsdl_xsd4.xml" namespace="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+	<xs:complexType name="ArrayOfDayRankingStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="DayRankingStruct" nillable="true" type="tns:DayRankingStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfDayRankingStruct" nillable="true" type="tns:ArrayOfDayRankingStruct" />
+	<xs:complexType name="DayRankingStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="CompetitionName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="LstTeamRankingStruct" nillable="true" type="tns:ArrayOfTeamDayRankingStruct" />
+			<xs:element minOccurs="0" name="NumDay" type="xs:int" />
+			<xs:element minOccurs="0" name="SeasonEndDate" nillable="true" type="xs:dateTime" />
+			<xs:element minOccurs="0" name="SeasonStartDate" nillable="true" type="xs:dateTime" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DayRankingStruct" nillable="true" type="tns:DayRankingStruct" />
+	<xs:complexType name="ArrayOfTeamDayRankingStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="TeamDayRankingStruct" nillable="true" type="tns:TeamDayRankingStruct" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfTeamDayRankingStruct" nillable="true" type="tns:ArrayOfTeamDayRankingStruct" />
+	<xs:complexType name="TeamDayRankingStruct">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="AbbrevClubName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="ClubName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="CodeName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="EvolutionOfRank" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="GoalAgainst" type="xs:int" />
+			<xs:element minOccurs="0" name="GoalAverage" type="xs:int" />
+			<xs:element minOccurs="0" name="GoalFor" type="xs:int" />
+			<xs:element minOccurs="0" name="IdTeam" type="xs:int" />
+			<xs:element minOccurs="0" name="LstCIS" nillable="true" type="q1:ArrayOfCIS"
+				xmlns:q1="http://schemas.datacontract.org/2004/07/LiveMediaStructs.CommonNS" />
+			<xs:element minOccurs="0" name="MediaName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="NbDraw" type="xs:int" />
+			<xs:element minOccurs="0" name="NbLost" type="xs:int" />
+			<xs:element minOccurs="0" name="NbMatchesPlayed" type="xs:int" />
+			<xs:element minOccurs="0" name="NbPoints" type="xs:int" />
+			<xs:element minOccurs="0" name="NbWon" type="xs:int" />
+			<xs:element minOccurs="0" name="Rank" type="xs:int" />
+			<xs:element minOccurs="0" name="TeamName" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TeamDayRankingStruct" nillable="true" type="tns:TeamDayRankingStruct" />
+</xs:schema>
